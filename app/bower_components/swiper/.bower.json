@@ -1,0 +1,31 @@
+{
+  "name": "swiper",
+  "repo": "nolimits4web/Swiper",
+  "description": "Mobile touch slider and framework with hardware accelerated transitions",
+  "version": "2.4.2",
+  "keywords": [
+    "swiper",
+    "swipe",
+    "slider"
+  ],
+  "dependencies": {},
+  "scripts": [
+    "dev/idangerous.swiper.js"
+  ],
+  "main": "dev/idangerous.swiper.js",
+  "styles": [
+    "dev/idangerous.swiper.css"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nolimits4web/Swiper",
+  "_release": "2.4.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.4.2",
+    "commit": "7bf178a7dc07ae0eacaf91f0c69f24a8040da556"
+  },
+  "_source": "git://github.com/nolimits4web/Swiper.git",
+  "_target": "~2.4.2",
+  "_originalSource": "swiper",
+  "_direct": true
+}

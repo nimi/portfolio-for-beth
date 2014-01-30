@@ -1,0 +1,30 @@
+#intro-region {
+  background-color: $sand;
+  color: white;
+  @include box-shadow(0px -2px 3px rgba(0, 0, 0, 0.3));
+  height: 100%
+}
+
+.intro-block {
+  @include clearfix;
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  text-align: center;
+
+  .intro-image, .intro-content {
+    display: inline-block;
+    vertical-align: middle;  
+    text-align: left;
+  }
+
+  .intro-content {
+    margin-left: 22px;
+
+    h1, h2 {
+      font-weight: 200;
+      @include text-shadow(0px 1px 3px rgba(0, 0, 0, 0.3));
+      @include libre-baskerville;
+    }
+  }
+}

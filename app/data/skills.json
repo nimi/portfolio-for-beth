@@ -1,0 +1,118 @@
+
+[
+    {
+      "name": "HTML5",
+      "categories": ["markup", "frontend"],
+      "rating": 10
+    },
+    {
+      "name": "CSS3",
+      "categories": ["style", "frontend"],
+      "rating": 10
+    },
+    {
+      "name": "SASS/LESS",
+      "categories": ["style", "frontend"],
+      "rating": 9
+    },
+    {
+      "name": "BackboneJS",
+      "categories": ["js", "frontend", "frameworks"],
+      "rating": 9
+    },
+    {
+      "name": "MarionetteJS",
+      "categories": ["js", "frontend", "frameworks"],
+      "rating": 9
+    },
+    {
+      "name": "AngularJS",
+      "categories": ["js", "frontend"],
+      "rating": 6
+    },
+    {
+      "name": "Vanilla JavaScript",
+      "categories": ["js", "frontend"],
+      "rating": 8
+    },
+    {
+      "name": "CoffeeScript",
+      "categories": ["js", "frontend"],
+      "rating": 5
+    },
+    {
+      "name": "jQuery",
+      "categories": ["js", "frontend"],
+      "rating": 10
+    },
+    {
+      "name": "Handlebars/Mustache",
+      "categories": ["markup", "frontend"],
+      "rating": 8
+    },
+    {
+      "name": "Bootstrap",
+      "categories": ["style", "frontend"],
+      "rating": 9
+    },
+    {
+      "name": "Python",
+      "categories": ["backend"],
+      "rating": 3
+    },
+    {
+      "name": "Ruby/Ruby on Rails",
+      "categories": ["backend"],
+      "rating": 6
+    },
+    {
+      "name": "Django",
+      "categories": ["frameworks"],
+      "rating": 4
+    },
+    {
+      "name": "PhP",
+      "categories": ["backend"],
+      "rating": 4
+    },
+    {
+      "name": "Wordpress Theme Dev.",
+      "categories": ["frontend", "frameworks"],
+      "rating": 5
+    },
+    {
+      "name": "Wordpress Plugin Dev.",
+      "categories": ["backend"],
+      "rating": 3
+    },
+    {
+      "name": "Github",
+      "categories": ["backend", "frontend"],
+      "rating": 8
+    },
+    {
+      "name": "Cooking",
+      "categories": ["misc"],
+      "rating": 1
+    },
+    {
+      "name": "Using Anything Adobe",
+      "categories": ["misc"],
+      "rating": 9
+    },
+    {
+      "name": "mySQL, Postgres, Mongo admin",
+      "categories": ["backend"],
+      "rating": 0.5
+    },
+    {
+      "name": "Command Line/Terminal",
+      "categories": ["backend"],
+      "rating": 8
+    },
+    {
+      "name": "Grunt",
+      "categories": ["frontend"],
+      "rating": 8
+    }
+]
