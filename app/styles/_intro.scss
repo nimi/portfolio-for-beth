@@ -6,10 +6,7 @@
 }
 
 .intro-block {
-  @include clearfix;
-  position: absolute;
-  top: 40%;
-  left: 25%;
+  @extend %vertical-align;
   text-align: center;
 
   .intro-image, .intro-content {
@@ -24,7 +21,7 @@
     h1, h2 {
       font-weight: 200;
       @include text-shadow(0px 1px 3px rgba(0, 0, 0, 0.3));
-      @include libre-baskerville;
+      @include volkhov;
     }
   }
 }

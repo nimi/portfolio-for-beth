@@ -8,8 +8,33 @@
   		margin: auto;
   		position: absolute;
   		top: 0; left: 0; bottom: 0; right: 0;
-  		height: 175px;
-  		width: 75%;
+  		height: 200px;
+  		width: 100%;
+
+      li {
+        background: $sand;
+
+        a {
+          padding: 15px 35px;
+          @include helvetica;
+
+        }
+
+        :hover {
+          background-color: transparent;
+        }
+
+      }
+      :nth-child(2) {
+        background: $mustard;
+      }
+      :nth-child(3) {
+        background: $rose;
+      }
+      :nth-child(4) {
+        background: $emerald;
+      }
+
 	}
 
 	a {
