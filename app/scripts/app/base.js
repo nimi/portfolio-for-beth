@@ -45,9 +45,12 @@ this.App = (function(Backbone, Marionette) {
                 //Options
                 mode:'horizontal',
                 loop: true,
+                loopedSlides: 1,
+                slidesPerView: 1,
+                mousewheelControlForceToAxis: true,
                 onSlideChangeEnd:function(swiper){
                     //or here
-                    swiper.fixLoop();
+                    //swiper.fixLoop();
                 }
             });
         };
@@ -56,6 +59,8 @@ this.App = (function(Backbone, Marionette) {
         App.aboutRegion.show(new App.Views.AboutView());
         App.workRegion.show(new App.Views.WorkView());
         App.contactRegion.show(new App.Views.ContactView());
+
+        App.initializeSwiper();
 
         // ScrollTop on menu click --- Add nav functionality
         $('.nav a').on('click', function(evt) {

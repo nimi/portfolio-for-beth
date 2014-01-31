@@ -19,7 +19,6 @@ App.module('Views', function(Views, App, Backbone, Marionette, $, _) {
         onRender: function() {
         },
         onShow: function() {
-            App.initializeSwiper();
         },
 
     });
@@ -52,15 +51,11 @@ App.module('Views', function(Views, App, Backbone, Marionette, $, _) {
         template: 'contact',
         className: 'contact-block',
 
-        events: {
+        onShow: function() {
 
         },
 
-        showLabel: function(evt) {
-
-        },
-
-        hideLabels: function() {
-        }
+        //showLabel: function(evt) {},
+        //hideLabels: function() {}
     });
 });

@@ -45,9 +45,12 @@ this.App = (function(Backbone, Marionette) {
                 //Options
                 mode:'horizontal',
                 loop: true,
+                loopedSlides: 1,
+                slidesPerView: 1,
+                mousewheelControlForceToAxis: true,
                 onSlideChangeEnd:function(swiper){
                     //or here
-                    swiper.fixLoop();
+                    //swiper.fixLoop();
                 }
             });
         };
@@ -56,6 +59,8 @@ this.App = (function(Backbone, Marionette) {
         App.aboutRegion.show(new App.Views.AboutView());
         App.workRegion.show(new App.Views.WorkView());
         App.contactRegion.show(new App.Views.ContactView());
+
+        App.initializeSwiper();
 
         // ScrollTop on menu click --- Add nav functionality
         $('.nav a').on('click', function(evt) {
@@ -92,7 +97,6 @@ this.App = (function(Backbone, Marionette) {
         onRender: function() {
         },
         onShow: function() {
-            App.initializeSwiper();
         },
 
     });
@@ -125,16 +129,12 @@ this.App = (function(Backbone, Marionette) {
         template: 'contact',
         className: 'contact-block',
 
-        events: {
+        onShow: function() {
 
         },
 
-        showLabel: function(evt) {
-
-        },
-
-        hideLabels: function() {
-        }
+        //showLabel: function(evt) {},
+        //hideLabels: function() {}
     });
 });;    /** CONTROLLERS **
   * Controllers are a great way to pre-fetch dependencies

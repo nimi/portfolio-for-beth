@@ -4,6 +4,11 @@
   background-color: $darkGray;
   height: 100%;
 
+  .nav-header {
+    color: white;
+    margin-left: 15px;
+  }
+
 	ul {
   		margin: auto;
   		position: absolute;
@@ -20,9 +25,9 @@
 
         }
 
-        :hover {
-          background-color: transparent;
-        }
+          :hover {
+            background-color: transparent;
+          }
 
       }
       :nth-child(2) {
