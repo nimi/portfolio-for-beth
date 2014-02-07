@@ -24,16 +24,34 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "\n<div class=\"intro-image\">\n</div>\n<div class=\"intro-content\">\n  <h1>Elizabeth Weidl</h1>\n  <h3>community manager/writer/content strategist</h3>\n</div>";
+  return "\n<div class=\"intro-image\">\n</div>\n<h1>\n	<span data-shadow-text=\"Beth Weidl\">Beth Weidl</span><br />community manager / writer\n</h1>";
   });
 
-this["JST"]["app/templates/skills.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["app/templates/nav.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  buffer += "<a href=\"#";
+  if (stack1 = helpers.elementid) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.elementid); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.name); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</a>";
+  return buffer;
+  });
+
+this["JST"]["app/templates/navs.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "\n<div class=\"skills-intro\">\n  <h3 class=\"sm-header\">Skills &amp; Strengths</h3>\n  <p>I'm happiest when I'm creating engaging and intuitive experiences for people on the web.</p>\n  <p>I work best when I can focus on <b>exceptional design</b>, <b>user experience</b>, and <b>semantic code</b>.</p>\n  <p>I love building responsive, mobile-friendly web apps with Backbone &amp; Marionette, though I've built a few Django and Wordpress sites, too!</p>\n  <p></p>\n  <div class=\"filters\">\n    <span class=\"label label-info\" data-label=\"markup\">\n      <i class=\"fa fa-tag\"></i> Semantic Markup\n    </span>\n    <span class=\"label label-success\" data-label=\"markup\">\n      <i class=\"fa fa-tag\"></i>  JavaScript\n    </span>\n    <span class=\"label label-warning\" data-label=\"markup\">\n      <i class=\"fa fa-tag\"></i>  Backend / DevTools\n    </span>\n    <span class=\"label label-danger\" data-label=\"markup\">\n      <i class=\"fa fa-tag\"></i> Misc\n    </span>\n    <span class=\"label label-primary\" data-label=\"markup\">\n      <i class=\"fa fa-tag\"></i> Front End\n    </span>\n  </div>\n</div>\n<div class=\"skills-list-block\">\n  <div class=\"skills-list\"></div>\n</div>";
+  return "<div class=\"nav-header\">\n    <h2>Beth<br />Weidl</h2>\n</div>\n<nav>\n    <ul class=\"nav nav-stacked\" id=\"nav-intro\"></ul>\n</nav>";
   });
 
 this["JST"]["app/templates/work.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -42,5 +60,5 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"work-content\">\n  	<div class=\"container\">\n  		<div class=\"row\">\n  	  		<div class=\"col-sm-6\">\n  	  			1\n			</div>\n  	  		<div class=\"col-sm-6\">\n  	  			1\n			</div>\n			<div class=\"col-sm-6\">\n  	  			1\n			</div>\n			<div class=\"col-sm-6\">\n  	  			1\n			</div>\n			<div class=\"col-sm-6\">\n  	  			1\n			</div>\n			<div class=\"col-sm-6\">\n  	  			1\n			</div>\n		</div>\n	</div>\n</div>";
+  return "<div class=\"work-content\">\n  	<div class=\"container\">\n  		<div class=\"row\">\n  	  		<div class=\"col-sm-6 project-item\">\n			</div>\n  	  		<div class=\"col-sm-6 project-item\">\n			</div>\n			<div class=\"col-sm-6 project-item\">\n			</div>\n			<div class=\"col-sm-6 project-item\">\n			</div>\n			<div class=\"col-sm-6 project-item\">\n			</div>\n			<div class=\"col-sm-6 project-item\">\n			</div>\n		</div>\n	</div>\n</div>";
   });

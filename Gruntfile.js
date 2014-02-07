@@ -44,7 +44,7 @@ module.exports = function (grunt) {
                 tasks: ['handlebars']
             },
             js: {
-                files: ['<%= yeoman.app %>/scripts/app/{,*/}*.js'],
+                files: ['<%= yeoman.app %>/scripts/apps/{,*/}*.js'],
                 tasks: ['concat:backbone']
             }
         },
@@ -162,12 +162,18 @@ module.exports = function (grunt) {
 
             backbone: {
                 src: [
-                    '<%= yeoman.app %>/scripts/app/base.js',
-                    '<%= yeoman.app %>/scripts/app/entities.js',
-                    '<%= yeoman.app %>/scripts/app/views.js',
-                    '<%= yeoman.app %>/scripts/app/controllers.js'
+                    '<%= yeoman.app %>/scripts/apps/app.js',
+                    '<%= yeoman.app %>/scripts/entities/entities.js',
+                    '<%= yeoman.app %>/scripts/apps/nav/nav_app.js',
+                    '<%= yeoman.app %>/scripts/apps/nav/list/list_view.js',
+                    '<%= yeoman.app %>/scripts/apps/nav/list/list_controller.js',
+                    '<%= yeoman.app %>/scripts/apps/portfolio/portfolio_app.js',
+                    '<%= yeoman.app %>/scripts/apps/portfolio/intro/intro_view.js',
+                    '<%= yeoman.app %>/scripts/apps/portfolio/intro/intro_controller.js',
+                    '<%= yeoman.app %>/scripts/apps/portfolio/about/about_view.js',
+                    '<%= yeoman.app %>/scripts/apps/portfolio/about/about_controller.js'
                 ],
-                dest: '<%= yeoman.app %>/scripts/app.js'
+                dest: '<%= yeoman.app %>/scripts/application.js'
             }
         },
         // Handlebars

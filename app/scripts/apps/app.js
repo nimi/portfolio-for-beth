@@ -1,6 +1,4 @@
 this.App = (function(Backbone, Marionette) {
-    
-    'use strict';
 
     var App, Router, API;
 
@@ -12,7 +10,7 @@ this.App = (function(Backbone, Marionette) {
         render: function(template, data) {
             var path = this.getTemplate(template);
             if(!path) {
-                $.error('Template ' + template + ' not found!');
+                $.error('Nooooo, template ' + template + ' not found!');
                 return;
             }
             return path(data);
@@ -25,18 +23,29 @@ this.App = (function(Backbone, Marionette) {
 
     App = new Marionette.Application();
 
-    App.reqres = new Backbone.Wreqr.RequestResponse();
+    //App.reqres = new Backbone.Wreqr.RequestResponse();
 
 
+    App.addRegions({
+        navRegion: '#nav-region',
+        introRegion: '#intro-region',
+        aboutRegion: '#about-region',
+        workRegion: '#work-region',
+        contactRegion: '#contact-region'
+    });
+
+
+    App.addInitializer(function() {
+        App.module('NavApp').start();
+    });
+
+    //Why are regions added on 'initialize after'? Where is history?
+    //Is history necessary?
     App.on('initialize:after', function() {
 
-        App.addRegions({
-            introRegion: '#intro-region',
-            aboutRegion: '#about-region',
-            skillsRegion: '#skills-region',
-            workRegion: '#work-region',
-            contactRegion: '#contact-region'
-        });
+        if (Backbone.history) {
+            Backbone.history.start();
+        }
 
         var swiper = null;
 
@@ -54,11 +63,6 @@ this.App = (function(Backbone, Marionette) {
                 }
             });
         };
-    
-        App.introRegion.show(new App.Views.IntroView());
-        App.aboutRegion.show(new App.Views.AboutView());
-        App.workRegion.show(new App.Views.WorkView());
-        App.contactRegion.show(new App.Views.ContactView());
 
         App.initializeSwiper();
 

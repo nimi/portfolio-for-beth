@@ -1,27 +1,65 @@
 #intro-region {
-  background-color: $sand;
-  color: white;
-  @include box-shadow(0px -2px 3px rgba(0, 0, 0, 0.3));
-  height: 100%
+    height: 100%;
+    background-color: $sand;
 }
 
 .intro-block {
-  @extend %vertical-align;
-  text-align: center;
+    color: white;
+    @include box-shadow(0px -2px 3px rgba(0, 0, 0, 0.3));
+    @extend %vertical-align;
+    text-align: center;
 
-  .intro-image, .intro-content {
-    display: inline-block;
-    vertical-align: middle;  
-    text-align: left;
-  }
+    .intro-content {
+        display: inline-block;
+        vertical-align: middle;  
+        text-align: left;
+    }
 
-  .intro-content {
-    margin-left: 22px;
-
-    h1, h2 {
-      font-weight: 200;
-      @include text-shadow(0px 1px 3px rgba(0, 0, 0, 0.3));
+    h1 {
       @include volkhov;
     }
-  }
+
+    h1 {
+        font: 600 1.5em/1;
+        color: rgba(0,0,0,.5);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        font-size: 1.75em;
+        margin-top: 0;
+        //position: absolute;
+        //top: 25%;
+        //width: 100%;
+    }
+
+    span, span:after {
+        font-weight: 900;
+        color: #efedce;
+        white-space: nowrap;
+        display: inline-block;
+        position: relative;
+        letter-spacing: .1em;
+        padding: .2em 0 .25em 0;
+        padding-top: 0;
+    }
+
+    span {
+        font-size: 3.1em;
+        padding-top: 0;
+        z-index: 100;
+        text-shadow: .04em .04em 0 #9cb8b3;
+    }
+
+    span:after {
+        padding-top: 0;
+        content: attr(data-shadow-text);
+        color: rgba(0,0,0,.35);
+        text-shadow: none;
+        position: absolute;
+        left: .0875em;
+        top: .0875em;
+        z-index: -1;
+        -webkit-mask-image: url(http://f.cl.ly/items/1t1C0W3y040g1J172r3h/mask.png);
+    }
+
 }

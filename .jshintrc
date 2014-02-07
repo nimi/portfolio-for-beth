@@ -15,7 +15,7 @@
     "regexp": true,
     "undef": false,
     "unused": false,
-    "strict": true,
+    "strict": false,
     "trailing": true,
     "smarttabs": true,
     "jquery": true

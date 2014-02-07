@@ -7,6 +7,12 @@
 .work-block {
   text-align: left;
 
+	.project-item {
+		height: 100px;
+		background-color: rgba(0,0,0,.2);
+		margin: 10px;
+	}
+
   .work-content {
     margin-left: 22px;
   }
