@@ -159,12 +159,20 @@ this.App = (function(Backbone, Marionette) {
 		},
 		showAbout: function() {
 			PortfolioApp.About.Controller.showAbout();
+		},
+		showWork: function() {
+			PortfolioApp.Work.Controller.showWork();
+		},
+		showContact: function() {
+			PortfolioApp.Contact.Controller.showContact();
 		}
 	};
 
 	PortfolioApp.on('start', function() {
 		API.showIntro();
 		API.showAbout();
+		API.showWork();
+		API.showContact();
 	});
 
 });;App.module('PortfolioApp.Intro', function(Intro, App, Backbone, Marionette, $, _) {
@@ -215,6 +223,54 @@ this.App = (function(Backbone, Marionette) {
 		getAboutView: function() {
 			this.aboutView = new About.View({});
 			return this.aboutView;
+		}
+	};
+
+});;App.module('PortfolioApp.Work', function(Work, App, Backbone, Marionette, $, _) {
+    Work.View = Marionette.ItemView.extend({
+        template: 'work',
+        className: 'work-block',
+
+        onRender: function() {
+        },
+
+        transitionIn: function() {
+        }
+    });
+});;App.module('PortfolioApp.Work', function(Work, App, Backone, Marionette, $, _) {
+
+	Work.Controller = {
+		showWork: function() {
+			workView = this.getWorkView();
+			App.workRegion.show(workView);
+		},
+		getWorkView: function() {
+			this.workView = new Work.View({});
+			return this.workView;
+		}
+	};
+
+});;App.module('PortfolioApp.Contact', function(Contact, App, Backbone, Marionette, $, _) {
+    Contact.View = Marionette.ItemView.extend({
+        template: 'contact',
+        className: 'contact-block',
+
+        onRender: function() {
+        },
+
+        transitionIn: function() {
+        }
+    });
+});;App.module('PortfolioApp.Contact', function(Contact, App, Backone, Marionette, $, _) {
+
+	Contact.Controller = {
+		showContact: function() {
+			contactView = this.getContactView();
+			App.contactRegion.show(contactView);
+		},
+		getContactView: function() {
+			this.contactView = new Contact.View({});
+			return this.contactView;
 		}
 	};
 

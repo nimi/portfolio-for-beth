@@ -15,7 +15,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"intro-content\">\n  <h1>Contact</h1>\n</div>";
+  return "<div class=\"contact-content\">\n  <h1>Contact</h1>\n</div>";
   });
 
 this["JST"]["app/templates/intro.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -60,5 +60,5 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"work-content\">\n  	<div class=\"container\">\n  		<div class=\"row\">\n  	  		<div class=\"col-sm-6 project-item\">\n			</div>\n  	  		<div class=\"col-sm-6 project-item\">\n			</div>\n			<div class=\"col-sm-6 project-item\">\n			</div>\n			<div class=\"col-sm-6 project-item\">\n			</div>\n			<div class=\"col-sm-6 project-item\">\n			</div>\n			<div class=\"col-sm-6 project-item\">\n			</div>\n		</div>\n	</div>\n</div>";
+  return "<div class=\"work-content\">\n  	<div class=\"container\">\n  		<div class=\"row\">\n  			<div class=\"col-xs-10\">\n  				<h2>Selected Work</h2>\n			</div>\n  	  		<div class=\"col-xs-5 project-item\">\n			</div>\n  	  		<div class=\"col-xs-5 project-item\">\n			</div>\n			<div class=\"col-xs-5 project-item\">\n			</div>\n			<div class=\"col-xs-5 project-item\">\n			</div>\n			<div class=\"col-xs-5 project-item\">\n			</div>\n			<div class=\"col-xs-5 project-item\">\n			</div>\n		</div>\n	</div>\n</div>";
   });

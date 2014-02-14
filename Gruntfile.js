@@ -171,7 +171,11 @@ module.exports = function (grunt) {
                     '<%= yeoman.app %>/scripts/apps/portfolio/intro/intro_view.js',
                     '<%= yeoman.app %>/scripts/apps/portfolio/intro/intro_controller.js',
                     '<%= yeoman.app %>/scripts/apps/portfolio/about/about_view.js',
-                    '<%= yeoman.app %>/scripts/apps/portfolio/about/about_controller.js'
+                    '<%= yeoman.app %>/scripts/apps/portfolio/about/about_controller.js',
+                    '<%= yeoman.app %>/scripts/apps/portfolio/work/work_view.js',
+                    '<%= yeoman.app %>/scripts/apps/portfolio/work/work_controller.js',
+                    '<%= yeoman.app %>/scripts/apps/portfolio/contact/contact_view.js',
+                    '<%= yeoman.app %>/scripts/apps/portfolio/contact/contact_controller.js'
                 ],
                 dest: '<%= yeoman.app %>/scripts/application.js'
             }
